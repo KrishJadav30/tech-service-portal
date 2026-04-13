@@ -1,0 +1,83 @@
+/* --- src/pages/Repair.css --- */
+
+.repair-container {
+  padding: 3rem;
+  width: 1000px;
+  max-width: 650px;
+  margin: 2rem auto;
+}
+
+.repair-container h2 {
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2.2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.repair-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* --- Glass Inputs --- */
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  padding: 14px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff; /* <--- Forces typed text to be white */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Fallback background for select dropdown options so they are readable */
+.form-group select option {
+  background: #24243e; 
+  color: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* <--- THIS FIXES THE DARK PLACEHOLDER TEXT ---> */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5); 
+}
+
+/* Beautiful focus rings */
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-glow);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
+.submit-btn {
+  margin-top: 1.5rem;
+  padding: 15px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}

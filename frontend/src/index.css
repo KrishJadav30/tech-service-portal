@@ -1,0 +1,27 @@
+/* --- src/index.css --- */
+:root {
+  color-scheme: dark;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1917;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.3);
+  border-radius: 10px;
+  border: 2px solid #1c1917;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-glow);
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.4);
+  color: #fff;
+}

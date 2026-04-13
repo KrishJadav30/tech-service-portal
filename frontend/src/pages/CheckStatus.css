@@ -1,0 +1,53 @@
+.status-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 3rem;
+}
+
+.status-header { text-align: center; margin-bottom: 3rem; }
+.status-header h2 {
+  color: #fff; font-size: 2.5rem; margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #fff, #4facfe);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.status-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+.tickets-grid { display: grid; gap: 25px; }
+
+/* Individual Glass Cards */
+.ticket-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.ticket-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-header {
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem; margin-bottom: 1rem;
+}
+
+.ticket-header h4 { margin: 0; color: #fff; font-size: 1.3rem; }
+.ticket-body p { margin-bottom: 0.5rem; color: var(--text-muted); }
+.ticket-body strong { color: #fff; }
+
+.no-results {
+  text-align: center; padding: 3rem;
+  background: rgba(0,0,0,0.2); border-radius: 12px; border: 1px dashed rgba(255,255,255,0.2);
+}
+.no-results p { font-size: 1.2rem; color: var(--text-muted); }
+
+/* Re-use dashboard status badge colors */
+.status-pending { background: rgba(255, 193, 7, 0.2); border: 1px solid #ffc107; color: #ffd54f; }
+.status-in-progress { background: rgba(79, 172, 254, 0.2); border: 1px solid #4facfe; color: #4facfe; }
+.status-completed { background: rgba(0, 176, 155, 0.2); border: 1px solid #00b09b; color: #00f2fe; }
+.status-cancelled { background: rgba(255, 75, 43, 0.2); border: 1px solid #ff4b2b; color: #ff8a65; }

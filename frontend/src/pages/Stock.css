@@ -1,0 +1,147 @@
+.stock-container {
+  padding: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stock-container h2 {
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+/* Glass Add Item Card */
+.add-item-card {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.add-item-card h3 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-glow);
+}
+
+.add-item-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.add-item-form input,
+.add-item-form select {
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  flex: 1;
+  min-width: 150px;
+  transition: all 0.3s;
+}
+
+.add-item-form select option {
+  background: #24243e; 
+  color: #fff;
+}
+
+.add-item-form input:focus,
+.add-item-form select:focus {
+  outline: none;
+  border-color: var(--primary-glow);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
+.add-btn { white-space: nowrap; }
+
+/* Glass Table */
+.table-responsive { overflow-x: auto; }
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.stock-table th, 
+.stock-table td {
+  padding: 18px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+  color: #fff;
+}
+
+.stock-table th {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.stock-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.stock-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Glowing Status Badges --- */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  white-space: nowrap; /* <--- THIS PREVENTS THE TEXT FROM BREAKING */
+  text-align: center;
+}
+
+.in-stock { background: rgba(0, 176, 155, 0.2); border: 1px solid #00b09b; color: #00f2fe; }
+.low-stock { background: rgba(255, 193, 7, 0.2); border: 1px solid #ffc107; color: #ffd54f; }
+.out-of-stock { background: rgba(255, 75, 43, 0.2); border: 1px solid #ff4b2b; color: #ff8a65; }
+
+/* Delete Buttons */
+.delete-btn {
+  background: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  box-shadow: none;
+}
+
+.delete-btn:hover { background: rgba(255, 75, 43, 0.2); box-shadow: 0 0 10px rgba(255, 75, 43, 0.4); transform: none; }
+
+/* Quantity Controls */
+.qty-controls { display: flex; align-items: center; gap: 12px; }
+
+.qty-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.qty-btn:hover:not(:disabled) { background: var(--primary-glow); color: #000; border-color: var(--primary-glow); box-shadow: 0 0 10px rgba(0, 242, 254, 0.5); }
+.qty-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+.qty-value { font-weight: 600; font-size: 1.05rem; min-width: 25px; text-align: center; color: #fff; }

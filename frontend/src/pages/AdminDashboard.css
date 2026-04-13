@@ -1,0 +1,130 @@
+.dashboard-container {
+  padding: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.dashboard-container h2 {
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th, .dashboard-table td {
+  padding: 18px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.dashboard-table th {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.repair-row { cursor: pointer; transition: background 0.2s; }
+.repair-row:hover { background: rgba(0, 242, 254, 0.1) !important; }
+
+.fw-bold { font-weight: 600; color: #fff; }
+.device-type { font-weight: 600; color: var(--primary-glow); }
+.device-brand { color: var(--text-muted); font-size: 0.85rem; }
+
+/* Dashboard Status Badges */
+.status-pending { background: rgba(255, 193, 7, 0.2); border: 1px solid #ffc107; color: #ffd54f; }
+.status-in-progress { background: rgba(79, 172, 254, 0.2); border: 1px solid #4facfe; color: #4facfe; }
+.status-completed { background: rgba(0, 176, 155, 0.2); border: 1px solid #00b09b; color: #00f2fe; }
+.status-cancelled { background: rgba(255, 75, 43, 0.2); border: 1px solid #ff4b2b; color: #ff8a65; }
+
+/* THE GLASS MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-content {
+  /* Heavy glass effect for the modal */
+  background: rgba(30, 30, 40, 0.7);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 90%; max-width: 550px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 20px rgba(0, 242, 254, 0.2);
+  color: #fff;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-header h3 { margin: 0; color: #fff; }
+.close-btn { background: transparent; border: none; font-size: 1.5rem; color: #fff; cursor: pointer; transition: color 0.2s; }
+.close-btn:hover { color: var(--danger); }
+
+.modal-body { padding: 1.5rem; }
+.detail-group { margin-bottom: 1rem; color: var(--text-muted); }
+.detail-group strong { color: #fff; margin-right: 8px; }
+
+.issue-box {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05); margin-top: 15px;
+}
+.issue-box p { margin-top: 8px; font-style: italic; color: #fff; }
+
+.update-status-section {
+  margin-top: 25px; padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex; align-items: center; gap: 15px;
+}
+
+.status-dropdown {
+  padding: 10px 15px; border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1); border: 1px solid var(--primary-glow);
+  color: #fff; font-size: 1rem; cursor: pointer; flex: 1;
+}
+
+.status-dropdown option { background: #1e1e28; color: #fff; }
+.status-dropdown:focus { outline: none; box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); }
+
+/* Update these in your respective CSS files */
+.in-stock, .status-completed { 
+  background: rgba(163, 230, 53, 0.15); 
+  border: 1px solid var(--success); 
+  color: var(--success); 
+}
+
+.low-stock, .status-pending { 
+  background: rgba(251, 191, 36, 0.15); 
+  border: 1px solid var(--primary-glow); 
+  color: var(--primary-glow); 
+}
+
+.out-of-stock, .status-cancelled { 
+  background: rgba(248, 113, 113, 0.15); 
+  border: 1px solid var(--danger); 
+  color: var(--danger); 
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+

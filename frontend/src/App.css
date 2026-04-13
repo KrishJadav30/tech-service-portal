@@ -1,0 +1,90 @@
+/* --- src/App.css --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Luxury Obsidian Glass Variables */
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-border: rgba(251, 191, 36, 0.15); /* Subtle gold rim */
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  
+  /* Amber & Charcoal Palette */
+  --text-main: #fdf8f5;
+  --text-muted: #d6d3d1;
+  --primary-glow: #fbbf24; /* Warm Gold */
+  --accent: #d97706;       /* Deep Amber */
+  --danger: #f87171;       /* Muted Red */
+  --success: #a3e635;      /* Muted Lime */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  /* Luxury Obsidian Gradient Animation */
+  background: linear-gradient(45deg, #1c1917, #292524, #1c1917, #000000);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradientBG 15s ease infinite;
+  color: var(--text-main);
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Core Glass Panel Class --- */
+.glass-panel {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+}
+
+/* --- Premium Amber Buttons --- */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--primary-glow));
+  color: #000; /* Dark text for better contrast on gold */
+  padding: 10px 24px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-glow);
+  border: 2px solid var(--primary-glow);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: rgba(251, 191, 36, 0.1);
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+}
